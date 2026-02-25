@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Siamo - SEMICOLON STUDIO</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #ffffff;
+            border-bottom: 2px solid #000;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #ccc;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .logo:hover {
+            color: #ff1493;
+        }
+
+        .nav {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-link {
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-decoration: none;
+            color: #000;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #ff1493;
+        }
+
+        /* Main Content */
+        .chi-siamo-container {
+            max-width: 1000px;
+            margin: 80px auto;
+            padding: 40px;
+            background-color: #ffffff;
+            border: 2px solid #000;
+        }
+
+        .chi-siamo-container h1 {
+            font-size: 48px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            color: #000;
+        }
+
+        .chi-siamo-container p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .chi-siamo-container p:first-of-type {
+            font-size: 18px;
+            color: #ff1493;
+            font-weight: bold;
+        }
+
+        .back-btn {
+            display: inline-block;
+            background-color: #000;
+            color: #ffffff;
+            padding: 12px 24px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            margin-top: 30px;
+        }
+
+        .back-btn:hover {
+            background-color: #ff1493;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 50px 40px;
+            margin-top: 40px;
+            border-top: 2px solid #000;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .footer-section h3 {
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            color: #ff1493;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 12px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #ff1493;
+        }
+
+        .chi-siamo-btn {
+            display: inline-block;
+            background-color: #ff1493;
+            color: #ffffff;
+            padding: 12px 24px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            margin-top: 15px;
+        }
+
+        .chi-siamo-btn:hover {
+            background-color: #ff1493;
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(255, 20, 147, 0.3);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            margin-top: 40px;
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 11px;
+            color: #999;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: #ccc;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #ff1493;
+        }
+
+        @media (max-width: 768px) {
+            .chi-siamo-container {
+                margin: 40px 20px;
+                padding: 20px;
+            }
+
+            .chi-siamo-container h1 {
+                font-size: 32px;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <a href="index.html" class="logo">SEMICOLON STUDIO</a>
+        <nav class="nav">
+            <a href="#" class="nav-link">COLLEZIONE</a>
+            <a href="#" class="nav-link">CONTATTI</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="chi-siamo-container">
+            <h1>Chi Siamo</h1>
+            <p>SEMICOLON STUDIO - Dove lo stile incontra la qualità</p>
+            <p>
+                Fondata con la passione per l'abbigliamento moderno e contemporaneo, SEMICOLON STUDIO rappresenta l'eccellenza nel design e nella fattura. 
+                Il nostro brand nasce dalla volontà di offrire capi che non sono solo belli da indossare, ma che raccontano una storia di dedizione e creatività.
+            </p>
+            <p>
+                Ogni collezione è curata meticolosamente dal nostro team di designer esperti, che si ispirano alle ultime tendenze internazionali senza mai perdere 
+                di vista la qualità e la sostenibilità. Crediamo che la moda non debba essere compromesso tra stile e responsabilità.
+            </p>
+            <p>
+                Il nostro obiettivo è semplice: fornire ai nostri clienti capi di abbigliamento che li facciano sentire sicuri, eleganti e consapevoli delle loro scelte. 
+                SEMICOLON STUDIO non è solo un brand, è una comunità di persone che condividono la stessa passione per la moda e il design.
+            </p>
+            <a href="index.html" class="back-btn">← Torna alla Home</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <!-- Sezione Chi Siamo -->
+            <div class="footer-section">
+                <h3>Chi Siamo</h3>
+                <p>SEMICOLON STUDIO è un brand di abbigliamento moderno dedicato a chi ama lo stile contemporaneo e la qualità.</p>
+                <a href="chi-siamo.html" class="chi-siamo-btn">Scopri di più</a>
+            </div>
+
+            <!-- Sezione Assistenza -->
+            <div class="footer-section">
+                <h3>Assistenza</h3>
+                <ul>
+                    <li><a href="#contatti">Contattaci</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#spedizioni">Spedizioni</a></li>
+                    <li><a href="#resi">Resi</a></li>
+                    <li><a href="#track">Traccia Ordine</a></li>
+                </ul>
+            </div>
+
+            <!-- Sezione Legale -->
+            <div class="footer-section">
+                <h3>Legale</h3>
+                <ul>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#terms">Termini e Condizioni</a></li>
+                    <li><a href="#cookies">Cookie Policy</a></li>
+                    <li><a href="#disclaimer">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div>© 2025 SEMICOLON STUDIO. Tutti i diritti riservati.</div>
+            <div class="social-links">
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+                <a href="https://facebook.com" target="_blank">Facebook</a>
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
